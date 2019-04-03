@@ -16,6 +16,7 @@ var c4Value;
 function gameStart() {
     numMatch = Math.floor(Math.random() * (120 - 19 + 1) + 19);
     console.log(numMatch);
+    $("#num-to-match").append(numMatch);
 }
 
 
@@ -27,6 +28,8 @@ function gameStart() {
 
 // MAIN PROCESSES
 // ===================================================
+
+gameStart();
 
 // at game start assign value to numMatch and cxValue
 
