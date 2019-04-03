@@ -13,6 +13,13 @@ var c4Value;
 // FUNCTIONS
 // ===================================================
 
+function gameStart() {
+    numMatch = Math.floor(Math.random() * (120 - 19 + 1) + 19);
+    console.log(numMatch);
+}
+
+
+
 // assign 1-12 to each of the 4 crystals
 
 // onclick add crystal value to score
@@ -25,11 +32,11 @@ var c4Value;
 
 // when game ends reset numMatch, cxValue, and score
 
-if score === numMatch {
-    alert("YOU WIN!");
-    // reset function;
-}
-else if score > numMatch {
-    alert("YOU LOSE!");
-    //reset function
-}
+// if score === numMatch {
+//     alert("YOU WIN!");
+//     // reset function;
+// }
+// else if score > numMatch {
+//     alert("YOU LOSE!");
+//     //reset function
+// }
