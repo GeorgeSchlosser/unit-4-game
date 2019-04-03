@@ -14,9 +14,10 @@ var c4Value;
 // ===================================================
 
 function gameStart() {
+    score = 0;
     $("#num-score").text(score);
     numMatch = Math.floor(Math.random() * (120 - 19 + 1) + 19);
-    $("#num-to-match").append(numMatch);
+    $("#num-to-match").text(numMatch);
     c1Value = Math.floor(Math.random() * (12 - 1 + 1) + 1);
     console.log(c1Value);
     c2Value = Math.floor(Math.random() * (12 - 1 + 1) + 1);
@@ -33,7 +34,24 @@ function gameStart() {
 
 
     // the function above works but doesn't prevent the same value from being assigned to different crystals
-    score = 0;
+    
+}
+
+
+
+function roundOver() {
+    if (score === numMatch) {
+        alert("YOU WIN!");
+        wins = wins + 1;
+        $("#wins-count").text(wins);
+        gameStart();
+    }
+    else if (score > numMatch) {
+        alert("YOU LOSE!");
+        losses = losses + 1;
+        $("#loss-count").text(losses);
+        gameStart();
+    }
 }
 
 $(".crystal-btn").on("click", function(){
@@ -42,22 +60,8 @@ $(".crystal-btn").on("click", function(){
     score += crystalValue;
     console.log(score);
     $("#num-score").text(score);
+    roundOver();
 })
-
-function roundOver() {
-    if (score === numMatch) {
-        alert("YOU WIN!");
-        wins = wins + 1;
-        $("#wins-count").append(wins);
-        gameStart();
-    }
-    else if (score > numMatch) {
-        alert("YOU LOSE!");
-        losses = losses + 1;
-        $("#loss-count").append(losses);
-        gameStart();
-    }
-}
 // not yet tested (310, 4/3/19)
 
 
