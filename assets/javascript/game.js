@@ -14,6 +14,7 @@ var c4Value;
 // ===================================================
 
 function gameStart() {
+    $("#num-score").text(score);
     numMatch = Math.floor(Math.random() * (120 - 19 + 1) + 19);
     $("#num-to-match").append(numMatch);
     c1Value = Math.floor(Math.random() * (12 - 1 + 1) + 1);
@@ -40,6 +41,7 @@ $(".crystal-btn").on("click", function(){
     crystalValue = parseInt(crystalValue);
     score += crystalValue;
     console.log(score);
+    $("#num-score").text(score);
 })
 
 function roundOver() {
@@ -69,6 +71,7 @@ function roundOver() {
 // ===================================================
 
 $(document).ready(gameStart());
+roundOver();
 
 // at game start assign value to numMatch and cxValue
 
