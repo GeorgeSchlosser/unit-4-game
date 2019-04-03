@@ -26,15 +26,11 @@ function gameStart() {
     console.log(c2Value);
     console.log(c3Value);
     console.log(c4Value);
-    // unsure if this will work
     $("#c1").attr("value", c1Value);
     $("#c2").attr("value", c2Value);
     $("#c3").attr("value", c3Value);
     $("#c4").attr("value", c4Value);
-
-
     // the function above works but doesn't prevent the same value from being assigned to different crystals
-    
 }
 
 
@@ -62,14 +58,7 @@ $(".crystal-btn").on("click", function(){
     $("#num-score").text(score);
     roundOver();
 })
-// not yet tested (310, 4/3/19)
-
-
-
-
-
-// onclick add crystal value to score
-
+// not yet tested (310, 4/3/19), UPDATE: appears functional (510, 4/3/19)
 
 // MAIN PROCESSES
 // ===================================================
@@ -78,6 +67,4 @@ $(document).ready(gameStart());
 roundOver();
 
 // at game start assign value to numMatch and cxValue
-
 // when game ends reset numMatch, cxValue, and score
-
