@@ -24,9 +24,23 @@ function gameStart() {
     console.log(c2Value);
     console.log(c3Value);
     console.log(c4Value);
+    // unsure if this will work
+    $("#c1").attr("value", c1Value);
+    $("#c2").attr("value", c2Value);
+    $("#c3").attr("value", c3Value);
+    $("#c4").attr("value", c4Value);
+
+
     // the function above works but doesn't prevent the same value from being assigned to different crystals
     score = 0;
 }
+
+$(".crystal-btn").on("click", function(){
+    var crystalValue = ($(this).attr("value"));
+    crystalValue = parseInt(crystalValue);
+    score += crystalValue;
+    console.log(score);
+})
 
 function roundOver() {
     if (score === numMatch) {
@@ -46,7 +60,7 @@ function roundOver() {
 
 
 
-// assign 1-12 to each of the 4 crystals
+
 
 // onclick add crystal value to score
 
