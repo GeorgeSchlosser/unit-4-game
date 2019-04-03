@@ -25,7 +25,24 @@ function gameStart() {
     console.log(c3Value);
     console.log(c4Value);
     // the function above works but doesn't prevent the same value from being assigned to different crystals
+    score = 0;
 }
+
+function roundOver() {
+    if (score === numMatch) {
+        alert("YOU WIN!");
+        wins = wins + 1;
+        $("#wins-count").append(wins);
+        gameStart();
+    }
+    else if (score > numMatch) {
+        alert("YOU LOSE!");
+        losses = losses + 1;
+        $("#loss-count").append(losses);
+        gameStart();
+    }
+}
+// not yet tested (310, 4/3/19)
 
 
 
@@ -37,17 +54,9 @@ function gameStart() {
 // MAIN PROCESSES
 // ===================================================
 
-gameStart();
+$(document).ready(gameStart());
 
 // at game start assign value to numMatch and cxValue
 
 // when game ends reset numMatch, cxValue, and score
 
-// if score === numMatch {
-//     alert("YOU WIN!");
-//     // reset function;
-// }
-// else if score > numMatch {
-//     alert("YOU LOSE!");
-//     //reset function
-// }
