@@ -15,8 +15,16 @@ var c4Value;
 
 function gameStart() {
     numMatch = Math.floor(Math.random() * (120 - 19 + 1) + 19);
-    console.log(numMatch);
     $("#num-to-match").append(numMatch);
+    c1Value = Math.floor(Math.random() * (12 - 1 + 1) + 1);
+    console.log(c1Value);
+    c2Value = Math.floor(Math.random() * (12 - 1 + 1) + 1);
+    c3Value = Math.floor(Math.random() * (12 - 1 + 1) + 1);
+    c4Value = Math.floor(Math.random() * (12 - 1 + 1) + 1);
+    console.log(c2Value);
+    console.log(c3Value);
+    console.log(c4Value);
+    // the function above works but doesn't prevent the same value from being assigned to different crystals
 }
 
 
