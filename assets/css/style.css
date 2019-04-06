@@ -4,9 +4,36 @@ mag-lav         #E334E8
 lavendar        #C746FF
 lt-periwinkle   #8134E8
 periwinkle      #583AFF
+
 */
 
 .crystal-btn {
     height: 50%;
     width: 75%;
 }
+
+.backOne {
+    background-color: #FF3AA7;
+}
+
+.backTwo {
+    background-color: #583AFF;
+}
+
+.backThree {
+    background-color: #C746FF;
+}
+
+p {
+    font-weight: bold;
+    color: white;
+  }
+
+h1 {
+    color: #8134E8;
+}
+
+h3 {
+    color: #E334E8;
+}
+  
